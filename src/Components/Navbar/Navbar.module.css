@@ -14,7 +14,7 @@
     font-size: 1.875rem; /* 30px */
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-text);
+    color: #2C3E50; /* Dark blue-gray */
 }
 
 .menu {
@@ -26,7 +26,6 @@
     display: none; /* Hidden by default */
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
 }
 
@@ -38,14 +37,14 @@
 
 .menuItems a {
     font-size: 1.5625rem; /* 25px */
-    color: var(--color-text);
+    color: #34495E; /* Slightly lighter gray-blue */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .menuItems a:hover,
 .menuItems a:focus {
-    color: var(--color-primary);
+    color: #E74C3C; /* Red for hover/focus */
     text-decoration: underline;
 }
 
@@ -58,44 +57,30 @@
 
     .menu {
         position: absolute;
-       margin-right: 10%;
-        right: 0;
+        right: 10%;
         flex-direction: column;
         align-items: flex-end;
         gap: 11px;
         z-index: 3;
-     
     }
 
     .menuBtn {
         display: block; /* Visible on mobile */
         cursor: pointer;
-   
-    
     }
 
     .menuItems {
-        display: none;
+        display: none; /* Hidden by default */
         flex-direction: column;
         align-items: center;
         gap: 13px;
         border-radius: 10px;
-        background-color: rgb(25,55,109); /* Optional: Add background */
-        padding: 10px; /* Optional: Add padding */
-        display: none; /* Hidden by default */
-        background: linear-gradient(0deg,rgba(25,55,109,0.2)0%,rgba(25,55,109,1) 100%);
+        background: linear-gradient(0deg, rgba(52, 73, 94, 0.2) 0%, rgba(52, 73, 94, 1) 100%);
         padding: 24px 33px;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) ;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     }
-
-
-    
 
     .menuItems.active {
         display: flex; /* Show when active */
-
-    
     }
-
-
 }
