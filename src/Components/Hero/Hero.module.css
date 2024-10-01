@@ -1,0 +1,141 @@
+
+
+@import "../../vars.css";
+/* Container for the hero section */
+.container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+   margin-top: 40px;
+   z-index: 1;
+   margin-left: 10%;
+   margin-right: 10%;
+   
+   
+  }
+  
+  /* Content section with the text */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+   
+  }
+  
+  /* Title styles */
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--font-robote);
+    background: linear-gradient(90deg,rgba(255,255,255,1)70%,
+    rgba(255,255,255,0)120%
+    );
+    line-height: 1.2;
+    -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+ 
+  }
+  
+  /* Description paragraph */
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  /* Contact button */
+  .ContactBtn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--color-primary); /* Button color */
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ContactBtn:hover {
+    background-color: #ff787d; /* Hover effect */
+  }
+  
+  /* Hero image styling */
+  .heroImg {
+    max-width: 40%; /* Keep the image within 40% of the section */
+    z-index: 1;
+    height: auto;
+    
+    
+  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+
+
+}
+
+
+@keyframes floating{
+    0% {
+        transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+                }
+}
+  
+  /* Top and bottom bars */
+  .topbar
+  {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 350px;
+    top: -128px;
+    right: 10vw;
+    border-radius: 764px;
+
+    background: rgba(25,25,100,0.7);
+   filter: blur(100px);
+   z-index: 0;
+  }
+  
+  .bottompbar
+  {
+    position: absolute;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 250px;
+    top: 248px;
+    right: -25vw;
+    border-radius: 764px;
+
+    background: rgba(25,25,100,0.7);
+   filter: blur(100px);
+   z-index: 0;
+  }
+
+
+  @media screen and (max-width:830px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .content{
+        align-items: center;
+    }
+    
+  }
